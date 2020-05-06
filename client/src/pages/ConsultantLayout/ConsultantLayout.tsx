@@ -8,7 +8,7 @@ export function ConsultantLayout(): ReactElement {
 
   return (
     <div className="consultant-page">
-      <Header name={name} />
+      <Header name={name} consultant={true} />
       <Users />
       <Chat />
     </div>
