@@ -6,8 +6,8 @@ const Routes: React.FC = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Login} />
-      <Route path="/app/user" component={UserLayout} />
-      <Route path="/app/consultant" component={ConsultantLayout} />
+      <Route path="/app/user/:name" component={UserLayout} />
+      <Route path="/app/consultant/:name" component={ConsultantLayout} />
     </Switch>
   </BrowserRouter>
 );

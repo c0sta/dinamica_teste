@@ -2,9 +2,15 @@ import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpeg";
 import { Input, Button } from "antd";
-
+import { useSelector, useDispatch } from "react-redux";
 import "./Login.scss";
+import { RootState } from "../../redux/store";
+
 export function Login(): ReactElement {
+  const username = useSelector((state: RootState) => state.session.username);
+  const dispatch = useDispatch();
+  console.log("name from initialState ->", username);
+  const handleClick = (username: string) => {};
   return (
     <div className="login">
       <section className="login__container">
@@ -12,7 +18,7 @@ export function Login(): ReactElement {
         <Input
           className="container__input"
           type="text"
-          onChange={(e) => console.log(e)}
+          onChange={(e) => handleClick(e.target.value)}
           placeholder="Username"
           size="large"
         />

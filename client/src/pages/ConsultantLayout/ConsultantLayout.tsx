@@ -1,7 +1,5 @@
 import React, { ReactElement } from "react";
 
-interface Props {}
-
-export function ConsultantLayout({}: Props): ReactElement {
-  return <div>Consultor</div>;
+export function ConsultantLayout(): ReactElement {
+  return <div>ConsultantLayout</div>;
 }
