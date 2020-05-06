@@ -9,7 +9,8 @@ export function UserLayout(): ReactElement {
   // const username = useSelector((state: RootState) => state.session.username);
   return (
     <div className="user-page">
-      <Header name={name} />
+      [
+      <Header name={name} consultant={false} />
       <Users />
       <Chat />
     </div>
