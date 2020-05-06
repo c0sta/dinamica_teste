@@ -2,15 +2,20 @@ import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpeg";
 import { Input, Button } from "antd";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./Login.scss";
-import { RootState } from "../../redux/store";
+import { UPDATE_SESSION } from "../../redux/store/session/session-types";
 
 export function Login(): ReactElement {
-  const username = useSelector((state: RootState) => state.session.username);
   const dispatch = useDispatch();
-  console.log("name from initialState ->", username);
-  const handleClick = (username: string) => {};
+  const [name, setName] = React.useState("");
+
+  const handleClick = () => {
+    dispatch({ type: UPDATE_SESSION, payload: name });
+    console.log(name);
+  };
+  // const username = useSelector((state: RootState) => state.session.username);
+
   return (
     <div className="login">
       <section className="login__container">
@@ -18,15 +23,23 @@ export function Login(): ReactElement {
         <Input
           className="container__input"
           type="text"
-          onChange={(e) => handleClick(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           placeholder="Username"
           size="large"
         />
-        <Button className="container__button" size="large" type="primary">
-          <Link to="/app/user">Sign In</Link>
+        <Button
+          onClick={handleClick}
+          className="container__button"
+          size="large"
+          type="primary"
+        >
+          <Link to={`/app/user/${name || "guest"}`}>Sign In</Link>
         </Button>
 
-        <Link className="container__button --small" to="/app/consultant">
+        <Link
+          className="container__button --small"
+          to={`/app/consultant/${name || "guest"}`}
+        >
           Sign In as Consultant
         </Link>
       </section>
