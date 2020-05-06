@@ -5,20 +5,20 @@ import {
 } from "./session-types";
 
 const initialState: SessionState = {
-  username: "guest",
+  username: "",
 };
 
 export function sessionReducer(
   state = initialState,
   action: SessionActionTypes
 ): SessionState {
+  // DEBUGGIN LIKE A
+  console.log(action.payload);
   switch (action.type) {
-    case UPDATE_SESSION: {
+    case UPDATE_SESSION:
       return {
-        ...state,
-        ...action.payload,
+        username: action.payload.username,
       };
-    }
     default:
       return state;
   }

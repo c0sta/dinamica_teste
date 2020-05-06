@@ -22,7 +22,7 @@ export function chatReducer(
     case DELETE_MESSAGE:
       return {
         messages: state.messages.filter(
-          (message) => message.timestamp !== action.meta.timestamp
+          (message) => message.timestamp !== action.payload.timestamp
         ),
       };
     default:

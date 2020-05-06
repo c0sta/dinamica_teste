@@ -18,7 +18,7 @@ interface SendMessageAction {
 
 interface DeleteMessageAction {
   type: typeof DELETE_MESSAGE;
-  meta: {
+  payload: {
     timestamp: Date;
   };
 }

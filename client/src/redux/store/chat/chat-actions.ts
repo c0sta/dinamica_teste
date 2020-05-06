@@ -15,7 +15,7 @@ export function sendMessage(newMessage: Message): ChatActionsTypes {
 export function deleteMessage(timestamp: Date): ChatActionsTypes {
   return {
     type: DELETE_MESSAGE,
-    meta: {
+    payload: {
       timestamp,
     },
   };
