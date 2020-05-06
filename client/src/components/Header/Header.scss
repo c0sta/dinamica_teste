@@ -1,0 +1,39 @@
+.header {
+  grid-area: header;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  // background-color: red;
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
+  &__button {
+    border: none;
+    background-color: transparent;
+    margin-right: 1.5em;
+    cursor: pointer;
+    &:hover {
+      background-color: ligthen(lightgray, 10%);
+      border: 8px;
+    }
+  }
+  .header__consultant {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    .consultant__search {
+      max-width: 200px;
+      margin-left: 4em;
+    }
+    .consultant__buttons {
+      display: flex;
+      margin: 0 2em;
+      .consultant__button {
+        margin: 0 0.5em;
+        background-color: #fff;
+        color: #1890ff;
+      }
+    }
+  }
+  .--bold {
+    font-weight: bold;
+  }
+}
