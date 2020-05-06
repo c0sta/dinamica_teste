@@ -1,0 +1,28 @@
+.users-list {
+  grid-area: users;
+  list-style-type: none;
+  padding: 10px;
+  overflow-y: auto;
+  height: 100%;
+  &__user {
+    margin: 0.5em 0;
+    padding: 0.7em;
+    border-radius: 8px;
+    &:hover {
+      background-color: lighten(lightgrey, 12%);
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightgrey;
+  border-radius: 10px;
+}
