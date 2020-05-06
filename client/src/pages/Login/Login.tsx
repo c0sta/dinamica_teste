@@ -14,14 +14,13 @@ export function Login(): ReactElement {
           type="text"
           onChange={(e) => console.log(e)}
           placeholder="Username"
+          size="large"
         />
-        <Button type="primary">
-          <Link className="container__button" to="/app/user">
-            Sign In
-          </Link>
+        <Button className="container__button" size="large" type="primary">
+          <Link to="/app/user">Sign In</Link>
         </Button>
 
-        <Link className="container__button" to="/app/consultant">
+        <Link className="container__button --small" to="/app/consultant">
           Sign In as Consultant
         </Link>
       </section>
