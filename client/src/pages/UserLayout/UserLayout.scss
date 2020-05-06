@@ -1,0 +1,10 @@
+.user-page {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 60px auto;
+  grid-template-areas:
+    "header header"
+    "users chat";
+  overflow: hidden;
+  height: 100vh;
+}
