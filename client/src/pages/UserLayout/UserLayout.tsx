@@ -11,7 +11,7 @@ export function UserLayout(): ReactElement {
     <div className="user-page">
       <Header name={name} consultant={false} />
       <Users />
-      <Chat />
+      <Chat name={name} />
     </div>
   );
 }
