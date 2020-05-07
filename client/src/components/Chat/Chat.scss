@@ -4,15 +4,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  overflow: hidden;
   &__messages {
+    display: flex;
+    flex-direction: column;
     width: 95%;
     height: 90%;
     border-radius: 8px;
-    // background: red;
+    overflow: auto;
     margin: 1em;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    .messages__no-message {
+      font-size: 1.3rem;
+      color: lightgrey;
+      align-self: center;
+    }
   }
   &__input-container {
     width: 95%;
