@@ -1,0 +1,10 @@
+.message-container {
+  background-color: lighten(lightgrey, 13%);
+  width: fit-content;
+  padding: 10px;
+  margin: 0.8em;
+  border-radius: 8px;
+  &__timestamp {
+    font-weight: 700;
+  }
+}
