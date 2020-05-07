@@ -12,7 +12,7 @@ export function sendMessage(newMessage: Message): ChatActionsTypes {
   };
 }
 
-export function deleteMessage(timestamp: Date): ChatActionsTypes {
+export function deleteMessage(timestamp: string): ChatActionsTypes {
   return {
     type: DELETE_MESSAGE,
     payload: {

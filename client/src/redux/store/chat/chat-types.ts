@@ -4,7 +4,7 @@ export const DELETE_MESSAGE = "DELETE_MESSAGE";
 export interface Message {
   user: string;
   message: string;
-  timestamp: Date;
+  timestamp: string;
 }
 
 export interface ChatState {
@@ -19,7 +19,7 @@ interface SendMessageAction {
 interface DeleteMessageAction {
   type: typeof DELETE_MESSAGE;
   payload: {
-    timestamp: Date;
+    timestamp: string;
   };
 }
 
