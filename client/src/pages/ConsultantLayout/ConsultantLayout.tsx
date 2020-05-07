@@ -10,7 +10,7 @@ export function ConsultantLayout(): ReactElement {
     <div className="consultant-page">
       <Header name={name} consultant={true} />
       <Users />
-      <Chat />
+      <Chat name={name} />
     </div>
   );
 }
