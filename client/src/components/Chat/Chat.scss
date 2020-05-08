@@ -17,7 +17,7 @@
     padding: 10px;
     .messages__no-message {
       font-size: 1.3rem;
-      color: lightgrey;
+      color: lighten(gray, 12%);
       align-self: center;
     }
   }
