@@ -1,9 +1,29 @@
 import React, { ReactElement } from "react";
 import { Tooltip, Input } from "antd";
-import { UserAddOutlined, UsergroupAddOutlined } from "@ant-design/icons";
-
+import {
+  UserAddOutlined,
+  UsergroupAddOutlined,
+  UserDeleteOutlined,
+} from "@ant-design/icons";
+import { api } from "../../services/api";
+import { UserContext } from "../../context/UserContext";
+import history from "history";
 export function ConsultantButtons(): ReactElement {
+  const { usersDispatch } = React.useContext(UserContext);
+
   const { Search } = Input;
+
+  const handleGenerateUsers = () => {
+    api
+      .get("generate-users")
+      .then((resp) =>
+        usersDispatch({ type: "ADD_USERS", payload: resp.data.users })
+      );
+  };
+  const handleDeleteUsers = () => {
+    api.get("delete-users");
+    usersDispatch({ type: "DELETE_USERS" });
+  };
 
   return (
     <section className="header__consultant">
@@ -19,7 +39,15 @@ export function ConsultantButtons(): ReactElement {
         />
       </Tooltip>
       <section className="consultant__buttons">
-        <button className="consultant__button">
+        <button
+          className="consultant__button --delete"
+          onClick={handleDeleteUsers}
+        >
+          <Tooltip title="Delete users">
+            <UserDeleteOutlined />
+          </Tooltip>
+        </button>
+        <button className="consultant__button" onClick={handleGenerateUsers}>
           <Tooltip title="Generate users">
             <UserAddOutlined />
           </Tooltip>
