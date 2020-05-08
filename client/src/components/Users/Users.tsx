@@ -1,6 +1,5 @@
 import React, { ReactElement } from "react";
 import { api } from "../../services/api";
-import { Collapse } from "antd";
 import "./Users.scss";
 import { UserContext } from "../../context/UserContext";
 
@@ -18,7 +17,7 @@ export function Users(): ReactElement {
       api.get("users").then((resp) => {
         usersDispatch({ type: "ADD_USERS", payload: resp.data });
       });
-  }, [usersDispatch, users.lenght]);
+  }, [usersDispatch, users]);
 
   return (
     <ul className="users-list">

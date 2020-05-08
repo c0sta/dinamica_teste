@@ -43,11 +43,11 @@ export function Chat({ name, consultant }: ChatProps): ReactElement {
     socket.on("retrieveMessages", (messages: Msg[]) =>
       dispatch({ type: SEND_MESSAGE, payload: [...messages] })
     );
-  }, []);
+  }, [dispatch, socket]);
 
   React.useEffect(() => {
     socket.on("receivedMessage", (newMessage: Msg) => updateMsgs(newMessage));
-  }, [messages]);
+  }, [messages, socket]);
 
   const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

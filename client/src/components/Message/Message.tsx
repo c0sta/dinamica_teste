@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { Popover, Button } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
-import { useDispatch } from "react-redux";
 
 import "./Message.scss";
 

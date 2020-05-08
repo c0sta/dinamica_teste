@@ -7,7 +7,6 @@ import {
 } from "@ant-design/icons";
 import { api } from "../../services/api";
 import { UserContext } from "../../context/UserContext";
-import history from "history";
 export function ConsultantButtons(): ReactElement {
   const { usersDispatch } = React.useContext(UserContext);
 

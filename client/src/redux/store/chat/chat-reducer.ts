@@ -13,10 +13,9 @@ export function chatReducer(
   state = initialState,
   action: ChatActionsTypes
 ): ChatState {
-  console.log(action.payload, state.messages);
   switch (action.type) {
     case SEND_MESSAGE:
-      let index = state.messages.findIndex((el) => el.id == action.payload.id); // Dont let add duplicate msgs
+      let index = state.messages.findIndex((el) => el.id === action.payload.id); // Dont let add duplicate msgs
       if (index === -1)
         return {
           messages: [...state.messages, action.payload],

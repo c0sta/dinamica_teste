@@ -1,7 +1,6 @@
 export const initialState = {
   groups: [],
 };
-
 export function groupsReducer(state = initialState, action) {
   switch (action.type) {
     case "ADD_GROUP":
