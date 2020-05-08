@@ -1,16 +1,25 @@
 .users-list {
   grid-area: users;
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   padding: 10px;
   overflow-y: auto;
   height: 100%;
+  box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.1);
+
   &__user {
-    margin: 0.5em 0;
+    margin: 0.3em 0;
     padding: 0.7em;
     border-radius: 8px;
     &:hover {
       background-color: lighten(lightgrey, 12%);
     }
+  }
+  &__no-users {
+    font-size: 1.3rem;
+    color: lighten(gray, 12%);
+    align-self: center;
   }
 }
 

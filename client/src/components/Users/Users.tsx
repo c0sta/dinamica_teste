@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react";
 import { api } from "../../services/api";
+import { Collapse } from "antd";
 import "./Users.scss";
+import { UserContext } from "../../context/UserContext";
 
 interface UserState {
   id: number;
@@ -9,24 +11,25 @@ interface UserState {
 }
 
 export function Users(): ReactElement {
-  const [users, setUsers] = React.useState([]);
-
+  const { usersState, usersDispatch } = React.useContext(UserContext);
+  const { users } = usersState;
   React.useEffect(() => {
-    api.get("users").then((response) => {
-      setUsers(response.data);
-    });
-  }, []);
+    if (users === [])
+      api.get("users").then((resp) => {
+        usersDispatch({ type: "ADD_USERS", payload: resp.data });
+      });
+  }, [usersDispatch, users.lenght]);
 
   return (
     <ul className="users-list">
-      {users ? (
+      {!users.length ? (
+        <li className="users-list__no-users">No users online...</li>
+      ) : (
         users.map((user: UserState) => (
           <li key={user.id} className="users-list__user">
             {user.name}
           </li>
         ))
-      ) : (
-        <p>Nenhum usuário online</p>
       )}
     </ul>
   );
