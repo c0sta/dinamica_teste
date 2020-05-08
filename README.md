@@ -13,12 +13,14 @@ Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
 
 - [x] Deve ter um campo para o usuario inserir a mensagem
 - [x] Algo indentificando na tela qual o usuário está logado
-- [ ] Ter um área onde são exibidas as mensagens no seguinte formato:
+- [x] Ter um área onde são exibidas as mensagens no seguinte formato:
       'DD/MM/YY - 'username' - HH:MM => 'mensagem'
-- [ ] Essa área que as mensagens serão exibidas deve:
-- [ ] Mostrar as mensagens de todos os usuários e organizadas das mais novas para as mais velhas de baixo para cima.
-- [ ] Esta área deve atualizar sempre que um usuário enviar alguma mensagem
-  - [ ] _Plus: Utilizar redux_
+
+#### Essa área que as mensagens serão exibidas deve:
+
+- [x] Mostrar as mensagens de todos os usuários e organizadas das mais novas para as mais velhas de baixo para cima.
+- [x] Esta área deve atualizar sempre que um usuário enviar alguma mensagem
+  - [x] _Plus: Utilizar redux_
 
 ## Aplicação consultor:
 
@@ -31,13 +33,13 @@ Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
 
 - [ ] Filtro por username
 - [ ] Filtro por data
-- [ ] Ordenar por mais recentes/mais antigas
+- [x] Ordenar por mais recentes/mais antigas
   - [ ] _Plus: Apagar mensagens_
 - [x] preferencialmente utilizar o create-react-app para desenvolver o front end
 
-3 - Crie uma Api Rest em node que irá gerar uma lista com nomes de 117 participantes.
+- [x] - 3 - Crie uma Api Rest em node que irá gerar uma lista com nomes de 117 participantes.
 
-Em Seguida Crie uma rota para ser consumida (essa rota irá retornar seu JSON de participantes).
+- [x] - Em Seguida Crie uma rota para ser consumida (essa rota irá retornar seu JSON de participantes).
 
 Atenção não é necessário o uso de banco de dados aqui, mas se utilizar será contado como um plus.
 
