@@ -13,16 +13,19 @@ export function chatReducer(
   state = initialState,
   action: ChatActionsTypes
 ): ChatState {
+  console.log(action.payload, state.messages);
   switch (action.type) {
     case SEND_MESSAGE:
-      return {
-        messages: [...state.messages, action.payload],
-      };
-
+      let index = state.messages.findIndex((el) => el.id == action.payload.id); // Dont let add duplicate msgs
+      if (index === -1)
+        return {
+          messages: [...state.messages, action.payload],
+        };
+      return state;
     case DELETE_MESSAGE:
       return {
         messages: state.messages.filter(
-          (message) => message.timestamp !== action.payload.timestamp
+          (message) => message.id !== action.payload.id
         ),
       };
     default:

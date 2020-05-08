@@ -12,11 +12,11 @@ export function sendMessage(newMessage: Message): ChatActionsTypes {
   };
 }
 
-export function deleteMessage(timestamp: string): ChatActionsTypes {
+export function deleteMessage(id: number): ChatActionsTypes {
   return {
     type: DELETE_MESSAGE,
     payload: {
-      timestamp,
+      id,
     },
   };
 }

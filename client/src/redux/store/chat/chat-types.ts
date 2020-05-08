@@ -2,6 +2,7 @@ export const SEND_MESSAGE = "SEND_MESSAGE";
 export const DELETE_MESSAGE = "DELETE_MESSAGE";
 
 export interface Message {
+  id: number;
   user: string;
   message: string;
   timestamp: string;
@@ -19,7 +20,7 @@ interface SendMessageAction {
 interface DeleteMessageAction {
   type: typeof DELETE_MESSAGE;
   payload: {
-    timestamp: string;
+    id: number;
   };
 }
 
