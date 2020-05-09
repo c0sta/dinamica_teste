@@ -2,6 +2,20 @@
 
 Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
 
+# Instalando Dependências
+
+Executar `yarn install` ou ``npm install` nas pasta raiz do projeto
+
+# Executando projeto
+
+## Front-end
+
+Executar `yarn start` na pasta raíz do projeto `client/`
+
+## Back-end
+
+Executar `yarn dev` na pasta raiz `server/`
+
 ## Aplicação usuário:
 
 1- Realizar página de login
