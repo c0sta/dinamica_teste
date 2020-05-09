@@ -3,8 +3,8 @@
 Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
 
 # Instalando Dependências
-Link p/ a aplicação web: https://chat-app-teste.netlify.app
-Link p/ a API: https://chat-app-teste.herokuapp.com
+* Link p/ a aplicação web: https://chat-app-teste.netlify.app
+* Link p/ a API: https://chat-app-teste.herokuapp.com
 Executar `yarn install` ou ``npm install` nas pasta raiz do projeto
 
 # Executando projeto
